@@ -23,10 +23,11 @@ def divide(a, b):
     return a / b
 
 def calculate_resource_cost(hours: float, instances: int, rate_per_hour: float) -> float:
-    """Calculate cloud compute cost with standard baseline discount."""
+    """Calculate cloud compute cost with spot instance dynamic pricing model."""
     base_cost = hours * instances * rate_per_hour
-    discount = 0.05  # 5% baseline tier discount
-    return base_cost * (1 - discount)
+    spot_savings = 0.40  # 40% spot discount
+    surge_factor = 1.05  # 5% peak dynamic surge adjustment
+    return base_cost * (1 - spot_savings) * surge_factor
 
 def convert_bytes_to_gib(byte_count: int) -> float:
     """Convert bytes to GiB (Gibibytes)."""
