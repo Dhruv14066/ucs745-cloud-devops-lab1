@@ -5,7 +5,10 @@ CloudCalc is a lightweight Python utility designed for cloud engineers and DevOp
 
 ## Features
 - Core arithmetic operations (Addition, Subtraction, Multiplication, Division)
-- Cloud compute resource cost estimation: Enterprise volume pricing model (10% to 15% tiered volume discount)
+- **Unified Multi-Tier Cloud Pricing Engine** *(Resolved Merge Conflict)*:
+  - **Standard Tier**: Baseline 5% loyalty discount
+  - **Enterprise Volume Tier**: Tiered volume discount (10% baseline, 15% for >10 instances)
+  - **Spot Instance Dynamic Tier**: 40% spot discount with 5% peak dynamic surge adjustments
 - Cloud storage metric conversions (Bytes to GiB)
 
 ## Usage
