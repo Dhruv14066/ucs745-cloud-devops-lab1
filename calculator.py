@@ -23,9 +23,9 @@ def divide(a, b):
     return a / b
 
 def calculate_resource_cost(hours: float, instances: int, rate_per_hour: float) -> float:
-    """Calculate cloud compute cost with standard baseline discount."""
+    """Calculate cloud compute cost with enterprise tier volume discount."""
     base_cost = hours * instances * rate_per_hour
-    discount = 0.05  # 5% baseline tier discount
+    discount = 0.15 if instances > 10 else 0.10  # Enterprise tier volume discount (10-15%)
     return base_cost * (1 - discount)
 
 def convert_bytes_to_gib(byte_count: int) -> float:
